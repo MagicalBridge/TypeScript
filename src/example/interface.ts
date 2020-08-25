@@ -101,6 +101,43 @@ const roledic2: RoleDic2 = {
   456: 'super_woman'
 }
 
+// 接口的继承
+// 有一种场景，这种场景是 定义的多个接口都拥有同一个属性
+
+interface Vegetables {
+  color: string
+}
+
+interface Tomoto extends Vegetables {
+  radius: number
+}
+
+interface Carrot {
+  length: number
+}
+
+// 继承了蔬菜的这个属性之后, 在这个对象中既可以写 radius 又可以写 color
+const tomato: Tomoto = {
+  radius: 1,
+  color: 'red'
+}
+
+// 混合类型的接口
+interface Counter {
+  (): void,
+  count: number
+}
+
+const getCounter = (): Counter => {
+  const c = () => { c.count++ }
+  c.count = 0;
+  return c
+}
+// 调用这个函数
+const counter: Counter = getCounter()
+counter();
+
+
 
 
 
