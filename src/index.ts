@@ -1,4 +1,5 @@
 // import './example/basic-type'
 // import './example/symbol'
 // import './example/interface'
-import './example/class-es6-1.js'
+// import './example/class-es6-1.js'
+import './example/class-es6-2.js'
